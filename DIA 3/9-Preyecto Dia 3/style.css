@@ -1,0 +1,19 @@
+
+p{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+button{
+    font-weight: bold;
+    background-color: tomato;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid tomato;
+    font-size: 15px;
+
+}
+
+.mensaje{
+    color: tomato;
+}

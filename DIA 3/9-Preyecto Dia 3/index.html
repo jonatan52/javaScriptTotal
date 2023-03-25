@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body onload="cuentaRegresiva()">
+    <h1>00:00:00</h1>
+    <h2>Test</h2>
+    <p class="mensaje">Responda las preguntas en menos de 30 segundos</p>
+
+    <p>1.¿Cuál es la diferencia entre let y var en JavaScript?</p>
+    <input type="text" id="respuesta1">
+
+    <p>2.¿Cómo puedes verificar si una variable tiene un valor nulo (null) en JavaScript?</p>
+    <input type="text" id="respuesta2">
+
+    <p>3.¿Qué es el operador ternario en JavaScript y cómo se utiliza?</p>
+    <input type="text" id="respuesta3">
+
+    <p>4.¿Cuál es la diferencia entre una función síncrona y asincrónica en JavaScript?</p>
+    <input type="text" id="respuesta4">
+
+    <p>5.¿Qué hace el método map() en JavaScript y cómo se utiliza?</p>
+    <input type="text" id="respuesta5"><br> <br>
+
+    <button onclick="finalizartest()">Finalizar</button> 
+    <button onclick="recargarTest()">Volver a interntar</button>
+
+
+    <audio id="audiFinal">
+        <source src="sonido/gameover.mp3" type="audio/mpeg">
+        sonido no abilitado
+    </audio>
+
+    <script>
+        let tiempoTerminado;
+        let intervaloTeiempo;
+       function cuentaRegresiva(){
+        tiempoTerminado = setTimeout(tiempoCumplido, 30000);
+        intervaloTeiempo = setInterval(ticTac, 1000);
+       }
+    </script>
+</body>
+</html>
