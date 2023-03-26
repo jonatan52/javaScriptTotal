@@ -8,9 +8,9 @@
     <title>Document</title>
 </head>
 <body onload="cuentaRegresiva()">
-    <h1>00:00:00</h1>
-    <h2>Test</h2>
-    <p class="mensaje">Responda las preguntas en menos de 30 segundos</p>
+    
+    <h1>Test</h1>
+    <p class="mensaje">Responda las preguntas en menos de 30 segundos <span id="conteo">00:00:00</span></p> 
 
     <p>1.¿Cuál es la diferencia entre let y var en JavaScript?</p>
     <input type="text" id="respuesta1">
@@ -27,21 +27,61 @@
     <p>5.¿Qué hace el método map() en JavaScript y cómo se utiliza?</p>
     <input type="text" id="respuesta5"><br> <br>
 
-    <button onclick="finalizartest()">Finalizar</button> 
+    <button onclick="finalizarTest()">Finalizar</button> 
     <button onclick="recargarTest()">Volver a interntar</button>
 
 
-    <audio id="audiFinal">
+    <audio id="audioFinal">
         <source src="sonido/gameover.mp3" type="audio/mpeg">
         sonido no abilitado
     </audio>
 
     <script>
         let tiempoTerminado;
-        let intervaloTeiempo;
+        let intervaloTiempo;
        function cuentaRegresiva(){
         tiempoTerminado = setTimeout(tiempoCumplido, 30000);
-        intervaloTeiempo = setInterval(ticTac, 1000);
+        intervaloTiempo = setInterval(ticTac, 1000);
+
+        document.getElementById("conteo").textContent = 30;
+       }
+
+       function ticTac(){
+        let tiempo = document.getElementById("conteo").textContent;
+        document.getElementById("conteo").textContent = tiempo - 1;
+       }
+
+       function tiempoCumplido(){
+        clearInterval(intervaloTiempo);
+        document.getElementById("conteo").textContent = 0;
+        document.getElementById("audioFinal").play();
+        alert("GAME OVER: tiempo finalizado. Intenta de nuevo");
+       }
+       
+       function finalizarTest(){
+        clearTimeout(tiempoTerminado);
+        clearInterval(intervaloTiempo);
+
+        let fecha = new Date();
+        let respuesta1 = document.getElementById("respuesta1").value;
+        let respuesta2 = document.getElementById("respuesta2").value;
+        let respuesta3 = document.getElementById("respuesta3").value;
+        let respuesta4 = document.getElementById("respuesta4").value;
+        let respuesta5 = document.getElementById("respuesta5").value;
+
+        let mensaje = fecha.toLocaleDateString("es-Es") + "\n" +
+                        "1." + respuesta1 + "\n" +
+                        "2." + respuesta2 + "\n" +
+                        "3." + respuesta3 + "\n" +
+                        "4." + respuesta4 + "\n" +
+                        "5." + respuesta5 ;
+
+         alert(mensaje);                                
+       }
+
+       function recargarTest(){
+        location.reload();
+
        }
     </script>
 </body>
