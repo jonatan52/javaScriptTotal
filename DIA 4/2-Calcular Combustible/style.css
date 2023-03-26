@@ -1,0 +1,21 @@
+body{
+    background-color:rgb(160, 212, 214);
+}
+p{
+    font-weight: bold;
+}
+
+input{
+    /* border: 2px solid black; */
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+button{
+    background-color:rgb(6, 99, 99);
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
