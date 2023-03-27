@@ -1,0 +1,19 @@
+#main{
+    
+    
+    background-color: brown;
+    width: 30%;
+}
+
+.botones{
+
+}
+
+#numMinMax{
+    display: flex;
+    flex-direction: center;
+}
+
+button{
+    width: 30px;
+}
