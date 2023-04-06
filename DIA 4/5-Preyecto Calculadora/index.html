@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -19,21 +20,21 @@
                 <input type="text" name="" class="input" id="numMax">
             </div>
             
-            <button onclick="" id="suma">+</button>
-            <button onclick="" id="resta">-</button>
-            <button onclick="" id="multiplacacion">*</button>
-            <button onclick="" id="division">/</button><br>
+            <button onclick="suma()" id="suma">+</button>
+            <button onclick="resta()" id="resta">-</button>
+            <button onclick="multiplicacion()" id="multiplacacion">*</button>
+            <button onclick="dividir()" id="division">/</button><br>
                
-            <button onclick="" id="raizCuadrada">&radic;</button>
-            <button onclick="" id="pontencia">x&sup2;</button>
-            <button onclick="" id="valorAbsoluto">&#x7C;&#x7C;</button>
-            <button onclick="" id="floor">Floor</button><br>
+            <button onclick="raizCuadrada()" id="raizCuadrada">&radic;</button>
+            <button onclick="potencia()" id="pontencia">x&sup2;</button>
+            <button onclick="valorAbsoluto()" id="valorAbsoluto">&#x7C;&#x7C;</button>
+            <button onclick="RedondedoAbajo()" id="floor">Floor</button><br>
 
 
             <input type="text" name="" id="resultado">  <br>
-            <button onclick="" id="ceil">Ceil</button>
-            <button onclick="" id="redondear">Redond</button>
-            <button onclick="" id="randon">Ramdon</button> 
+            <button onclick="redondeoArriba" id="ceil">Ceil</button>
+            <button onclick="redondear()" id="redondear">Redond</button>
+            <button onclick="elementoRandon()" id="randon">Ramdon</button> 
             
         </div>
 
