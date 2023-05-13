@@ -34,38 +34,52 @@ function dividir(){
 }
 
 //Funcion raiz cuadrada
-function raizCuadrada(num){
-    let raiz = Math.sqrt(num) 
-    return raiz;
+function raizCuadrada(){
+    let num1 = +document.getElementById("numUno").value;
+    mostrarResultado(Math.sqrt(num1));
+    
+    
+}
+
+// potencia
+function potencia(){
+    let num1 = +document.getElementById("numUno").value;
+    let num2 = +document.getElementById("numDos").value;
+    mostrarResultado(Math.pow(num1, num2));
 }
 
 //Funcion valor absoluto
-function valorAbsoluto(num){
-    let absoluto = Math.abs(num);
-    return absoluto;
+function valorAbsoluto(){
+    let absoluto = +document.getElementById("numUno").value
+    mostrarResultado(Math.abs(absoluto));
+    
 }
 
 //Funcion redondeo Abajo
 function redondeoAbajo(){
-    let redondearAbajo = Math.floor();
+    let redondearAbajo = +document.getElementById("resultado").value
+    mostrarResultado(Math.floor(redondearAbajo));
 
-    return redondearAbajo;
+   
 }
 
 //Funcion redondeo Arriba
 function redondeoArriba(){
-    let redondearArriba = Math.ceil();
+    let redondearArriba = +document.getElementById("resultado").value
+    mostrarResultado(Math.ceil(redondearArriba));
 
-    return redondearArriba;
+    
 }
 
 
 //Funcion un numero aleatorio
 function elementoRandon(){
-    let randon = Math.random();
+    let randon = +document.getElementById("resultado").value
+    mostrarResultado(Math.random(randon));
 }
 
 //Funcion para redondear 
 function redondear(){
-    let randon = Math.round();
+    let rendodeo = +document.getElementById("resultado").value
+    mostrarResultado(Math.round(rendodeo));
 }
