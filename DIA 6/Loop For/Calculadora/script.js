@@ -20,9 +20,19 @@ function multiplicar(){
         let itemLista = document.createElement("li");
         itemLista.innerText = textoResultado;
         elementoTablaMultiplicar.appendChild(itemLista); 
-       
-
+        
+    
+        
     }
     
+}  
 
-}
+
+
+
+
+
+// function recargar(){
+//     let recargarTabla = document.getElementById("mostrarTablas");
+//     document.location.update();
+// }
