@@ -58,12 +58,19 @@ button:hover{
 }
 
 #mostrarTablas{
-    display: flex;
+    display:flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 20px;
     font-size: 20px;
+}
+
+li{
+    flex-wrap: wrap;
 
 }
+
+
 
 
 
