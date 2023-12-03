@@ -46,15 +46,16 @@ function multiplicar(){
         for(let i=1; i<11; i++){
             document.querySelector("#listaTabla").innerHTML+=`
             <li>
-            ${(actilazarTabla())} x ${i} = ${(actilazarTabla()) * i}
+            ${numero} x ${i} = ${numero * i}
             </li>
          `
         }
+         
     }
 
 
-    function actilazarTabla(){
-       valor = document.querySelector("#textoTabla").addEventListener("change",multiplicar());
-       valor.value;
+    // function actilazarTabla(){
+    //    valor = document.querySelector("#textoTabla").addEventListener("change",multiplicar());
+    //    valor.value;
 
-    }
+    // }

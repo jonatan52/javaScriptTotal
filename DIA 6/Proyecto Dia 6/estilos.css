@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+
+
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#principal{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    
+
+    
+}
+
+#bordes{
+    
+   border: 1px solid seagreen;
+   border-radius: 10px;
+   padding: 50px;
+   margin: 50px;
+}
+
+
+#credenciales{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#imagen{
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    width: 20%;
+    
+}
+
+#notas{
+    display: flex;
+    justify-content: flex-start;
+    display: block;
+    
+}
+h3{
+    margin: 10px;
+    padding: 10px;
+}
+
+.promedios{
+    margin: 10px;
+}
+
+#botones{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.boton{
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    background: rgb(93, 88, 95);
+    color: white;
+}
+
+.linea{
+    margin: 10px;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+hr{
+    height: 2px;
+    width: 20%;
+    background: black;
+}
+#docente{
+    justify-content: flex-end;
+    margin-right: 70px;
+    
+}
+
