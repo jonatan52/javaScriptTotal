@@ -1,15 +1,7 @@
-// let arrayNota = [4.5, 5.2, 3.5,3.2]
-// for(let nota of arrayNota){
-//    // let suma = nota+=nota;
-//   console.log(nota)
-    
-// }
-
-
 
 function promedio(){
    let nota1 = parseInt(document.querySelector("#nota1").value)
-   console.log(nota1)
+  
    
    let nota2 = parseInt(document.querySelector("#nota2").value)
 
@@ -38,15 +30,33 @@ function NotaAlta(){
 
    let notaMax = Math.max(nota1, nota2, nota3, nota4);
    
-  document.querySelector("#NotaAlta").innerHTML=`<span>${parseInt(notaMax)}</span>`
+   not = document.querySelector("#NotaAlta").innerHTML=`<span>${parseInt(notaMax)}</span>`
+   return not;
   
 }
 
 function aplazos(){
-   promedio()
-   if(promedio.promedioNota < 4){
-      document.querySelector("#Aplazos").innerHTML=`<span>Aplazos</span>`
-   }
-  
+   let nota1 = parseInt(document.querySelector("#nota1").value)
+   let nota2 = parseInt(document.querySelector("#nota2").value)
+
+   let nota3 = parseInt(document.querySelector("#nota3").value)
+
+   let nota4 = parseInt(document.querySelector("#nota4").value)
+
+   let plazoNotas =[];
+
+   let aplazo = "No";
+    plazoNotas.push(nota1,nota2,nota3,nota4)
+    console.log(plazoNotas);
+
+    for(let nota of plazoNotas){
+      if(nota < 4){
+         aplazo = "Si"
+         document.querySelector("#Aplazos").innerHTML=`${aplazo}`;
+      }else{
+         document.querySelector("#Aplazos").innerHTML=`${aplazo}`;
+      }
+    }
+
    
 }
