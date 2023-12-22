@@ -7,24 +7,55 @@ function estraerNumeroDesdeElemento(elemento){
 }
 
 function calcular(){
-    let ventas1;
-    let ventas2; 
-    let ventas3;
-    let ventas4; 
-    let ventas5;
-    let ventas6;
+    let  ventas = [];
+    
 
-    ventas1 = estraerNumeroDesdeElemento("ventasTienda1");
-    ventas2 = estraerNumeroDesdeElemento("ventasTienda2");
-    ventas3 = estraerNumeroDesdeElemento("ventasTienda3");
-    ventas4 = estraerNumeroDesdeElemento("ventasTienda4");
-    ventas5 = estraerNumeroDesdeElemento("ventasTienda5");
-    ventas6 = estraerNumeroDesdeElemento("ventasTienda6");
+    ventas[0] = estraerNumeroDesdeElemento("ventasTienda1");
+    ventas[1] = estraerNumeroDesdeElemento("ventasTienda2");
+    ventas[2] = estraerNumeroDesdeElemento("ventasTienda3");
+    ventas[3] = estraerNumeroDesdeElemento("ventasTienda4");
+    ventas[4] = estraerNumeroDesdeElemento("ventasTienda5");
+    ventas[5] = estraerNumeroDesdeElemento("ventasTienda6");
 
-    let ventasTotal = ventas1 + ventas2 + ventas3 + ventas4 + ventas5 + ventas6;
-    let mesajeSalida = "Total Ventas: " + ventasTotal;
+
+    let ventasTotal = sumarTotal(ventas);
+    let ventaMayor = calcularVentaMayor(ventas);
+    let ventaMenor = calcularventaMenor(ventas);
+
+    let mesajeSalida = "Total Ventas:" + 
+        ventasTotal + " Venta Mayor:" + ventaMayor + 
+       " Venta Menor: " + ventaMenor;
+
     let elemntosSalida = document.getElementById("parrafoSalida");
     elemntosSalida.textContent = mesajeSalida;
 
+}
 
+function sumarTotal(array){
+    let total = 0;
+    for(let venta of array){
+        total += venta;
+       array.lengtht
+    }
+    return total;
+}
+
+function calcularVentaMayor(array){
+    let maximo = array[0] ;
+    for(let venta of array){
+        if(venta > maximo){
+            maximo = venta;
+        }
+    }
+    return maximo;
+}
+
+function calcularventaMenor(array){
+    let minimo = array[0];
+    for(let venta of array){
+        if(venta < minimo){
+            minimo = venta;
+        }
+    }
+    return minimo;
 }
