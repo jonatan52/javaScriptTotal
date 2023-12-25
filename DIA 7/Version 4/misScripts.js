@@ -1,9 +1,29 @@
+function crearTienda(contenedorID, min, cantidadTiendas){
+    // Encontrar contenedor por su id
+    let elementoContenedor = document.getElementById(contenedorID);
+
+    // loop para crear tantas tienda como se pidan
+    for(let conteoTiendas = 1; conteoTiendas<=cantidadTiendas; conteoTiendas++){
+        //Crear el texto de label para poder llamar a la funcion
+        let textoEtiqueta = "Tienda " + conteoTiendas;
+
+        //Crear tiendas con la funcion crearParrafoTienda
+        let parrafoTienda = crearParrafoTienda(textoEtiqueta, min);
+
+        //Agregar el pprafo al contenedor
+        elementoContenedor.appendChild(parrafoTienda);
+    }
+
+}
+
 function crearParrafoTienda(textoLabel, valorMin){
     //Crear etiqueta <p>
     let elementoParrafo = document.createElement("p");
 
     // Crear la etiqueta label
     let elementoEtiqueta = document.createElement("label");
+
+    elementoEtiqueta.innerText = textoLabel + ": "
 
     // Conectar la etiqueta label con el input
     elementoEtiqueta.setAttribute("for", textoLabel);
@@ -29,6 +49,7 @@ function crearParrafoTienda(textoLabel, valorMin){
 
 }
 
+
 function estraerNumeroDesdeElemento(elemento){
     let miElemento = document.getElementById(elemento);
     let miTexto = miElemento.value;
@@ -37,7 +58,7 @@ function estraerNumeroDesdeElemento(elemento){
 }
 
 
-document.getElementById().innerHTML
+// document.getElementById().innerHTML
 function calcular(){
     let  ventas = [];
     ventas[0] = estraerNumeroDesdeElemento("ventasTienda1");
