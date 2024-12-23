@@ -1,0 +1,36 @@
+body {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49%, -49%);
+
+}
+
+label{
+   text-align: left;
+   margin: 5px;
+   font-weight:bold
+}
+
+input{
+    margin: 5px;
+    height: 20px;
+}
+
+button{
+    padding: 5px;
+    margin: 5px;
+    font-weight:bold;
+    border-radius: 10px;
+}
