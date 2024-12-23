@@ -1,5 +1,5 @@
-let botonCarga = document.querySelector('#cargarEmpleado')
-let botonMostrarEmpleado = document.querySelector('#mostrarEmpleado')
+let botonCarga = document.querySelector('#cargarEmpleado');
+let botonMostrarEmpleado = document.querySelector('#mostrarEmpleado');
 
 let empleados = [];
 
@@ -28,8 +28,6 @@ function crearEmpleado() {
     empleado1.apellido = apllidoeUsuario;
     empleado1.fecha = fechaUsuario;
     empleado1.cargo = cargoUsuario;
-
-
     empleados.push(empleado1);
     alert('El empelado ha sido cargado con exito')
 
@@ -38,12 +36,9 @@ function crearEmpleado() {
         for (let emp in empleados) {
             alert(`${emp}  Codigo:${empleado1.legajo} Nombre:${empleado1.nombre} Fecha:${empleado1.fecha} Cargo:${empleado1.cargo}`)
         }
-
-
     }
+    
     botonMostrarEmpleado.addEventListener('click', mostrarEmpleado)
-    //limpiarFormulario();
+   
 }
-
-
 botonCarga.addEventListener('click', crearEmpleado);
