@@ -34,8 +34,6 @@ class Auto {
 
 }
 
-
-
 function agregarAuto(e){
     e.preventDefault();
     let auto = new Auto(marca, modelo, color, anio, titular);
@@ -71,4 +69,4 @@ function mostrarAutos(){
 console.log(autosRegistrados);
 btn.addEventListener('click', agregarAuto);
 btnMostrar.addEventListener('click', mostrarAutos);
-cons
+

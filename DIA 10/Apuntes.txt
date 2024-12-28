@@ -1,0 +1,25 @@
+-------------------- Clases -------------------------------------
+Declaracion de Clases
+Clase Papel{
+    constructor(alto,ancho){
+        this.alto = alto;
+        this.ancho = ancho;
+    }
+}
+
+-------------------- Expresion de Clases --------------------------
+*Anonima
+let Papel = class{
+    constructor(alto,ancho){
+        this.alto = alto;
+        this.ancho = ancho;
+    }
+}
+
+*Nombrada
+let Papel = class MiPapel{
+    constructor(alto,ancho){
+        this.alto = alto;
+        this.ancho = ancho;
+    }
+}

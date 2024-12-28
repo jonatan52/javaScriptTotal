@@ -1,0 +1,21 @@
+td,tr{
+    padding: 5px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+thead{
+    background-color: rgb(99, 139, 126);
+}
+span{
+    font-weight: bold;
+    
+}
+
+#botonMostrar{
+    padding: 5px;
+    margin: 5px;
+    background: rgb(69, 116, 163);
+    color: white;
+    border-radius: 10px;
+}
